@@ -1,3 +1,5 @@
+package SuperEasyProblems;
+
 import java.io.InputStreamReader;
 import java.util.Scanner;
 

@@ -1,3 +1,4 @@
+package SuperEasyProblems;
 
 import java.util.Scanner;
 

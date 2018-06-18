@@ -1,6 +1,9 @@
+package SuperEasyProblems;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 /**
  * Problem link :
@@ -17,24 +20,18 @@ public class Problem12279 {
         int n = -1;
         boolean ok = true;
         int cases = 1;
-        while((line=bufferedReader.readLine())!=null) {
-            if(ok) {
-                n = Integer.parseInt(line);
-                ok = false;
-                if(n==0) break;
-            }
-            else {
-                String [] a = line.split(" ");
-                int ans = 0;
-                for(int i=0;i<a.length;i++) {
-                    int b = Integer.parseInt(a[i]);
-                    if(b!=0) ans+=1;
-                    else ans-=1;
+        while((line=bufferedReader.readLine())!=null && !line.equals("0")) {
+            int ans = 0;
+            StringTokenizer stringTokenizer = new StringTokenizer(bufferedReader.readLine()," ");
+            while(stringTokenizer.hasMoreTokens()) {
+                if(Integer.parseInt(stringTokenizer.nextToken())>0) {
+                    ans++;
                 }
-                ok = true;
-                System.out.println("Case "+cases + ": "+ans);
-                cases++;
+                else {
+                    ans--;
+                }
             }
+            System.out.println("Case "+(cases++) + ": "+ans);
         }
     }
 }
