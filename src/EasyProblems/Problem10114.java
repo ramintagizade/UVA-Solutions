@@ -5,6 +5,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+/**
+ * Problem link :
+ * @see <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1055"></a>
+ */
+
+
+
 public class Problem10114 {
 
     public static void main (String [] args ) throws IOException {
