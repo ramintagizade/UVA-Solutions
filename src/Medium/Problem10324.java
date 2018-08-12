@@ -25,6 +25,13 @@ public class Problem10324 {
             int len = sequence.length();
             int n = Integer.parseInt(bufferedReader.readLine());
 
+            int [] dp = new int[len];
+            dp[0] = 0;
+
+            for(int i=1;i<len;i++) {
+                dp[i] = dp[i-1] + Math.abs(sequence.charAt(i)-sequence.charAt(i-1));
+            }
+
             System.out.println("Case "+cases+":");
             for(int i=0;i<n;i++) {
                 String  [] params = bufferedReader.readLine().split(" ");
@@ -37,19 +44,7 @@ public class Problem10324 {
                     ii = temp;
                 }
 
-                int start = ii;
-                int end = jj;
-                boolean ok = true;
-                while(start<end) {
-                    if(sequence.charAt(start)==sequence.charAt(start+1)) {
-                        start++;
-                    }
-                    else {
-                        ok = false;
-                        break;
-                    }
-                }
-                if(!ok ) {
+                if(dp[ii]!=dp[jj]) {
                     System.out.println("No");
                 }
                 else {
