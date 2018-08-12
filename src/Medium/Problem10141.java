@@ -1,4 +1,4 @@
-//package Medium;
+package Medium;
 
 import java.util.*;
 import java.io.*;
@@ -96,7 +96,7 @@ public class Problem10141 {
             		option = pair.getFirst();
             	}
             }
-            
+
             if(cases>1)
             	System.out.println();
 

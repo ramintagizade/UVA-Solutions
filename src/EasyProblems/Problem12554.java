@@ -1,4 +1,4 @@
-//package EasyProblems;
+package EasyProblems;
 
 import java.io.*;
 
